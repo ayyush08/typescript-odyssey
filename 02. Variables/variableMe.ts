@@ -24,4 +24,15 @@ let isLoggedIn : boolean = false;
 
 
 
+//any
+
+// let hero; // inferred as any when no type is specified
+let hero: string; // inferred as string when type is specified
+
+function getHero(){
+    return "IronMan";
+}
+
+hero = getHero();
+
 export {} //to avoid Scope error
