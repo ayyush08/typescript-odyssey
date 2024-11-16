@@ -1,4 +1,9 @@
 function addTwo(num:number){
+    // return 'helo'; // No error because return type is not defined
+    return num + 2;
+}
+function adddTwo(num:number): number{
+    // return 'hello'; // Error: Type 'string' is not assignable to type 'number'.
     return num + 2;
 }
 
