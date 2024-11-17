@@ -29,4 +29,24 @@ function createCourse():{name: string, isPaid:boolean}{ //return type is object
 
 
 
+// Type Alias
+
+type User = {
+    name: string,
+    email: string,
+    isPaid: boolean
+}
+
+function createUserAgain(user: User):User{
+    console.log(user);
+    return user;
+}
+
+createUserAgain({
+    name: 'Ayush',
+    email: 'ayush@gmail.com',
+    isPaid: true
+})
+
+
 export {} //to avoid Scope error
