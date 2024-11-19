@@ -17,3 +17,17 @@ myUser.email = " sa@gtmai "
 console.log(myUser);
 
 // myUser._id = "47834"; // Error: Cannot assign to '_id' because it is a read-only property.
+
+
+type cardNumber = {
+    cardNumber: number;
+    
+}
+
+type cardDate = {
+    cardDate: string;
+}
+
+type cardDetails = cardNumber & cardDate & {
+    cvv: number;
+}; // mix and match of both types using & operator
