@@ -8,10 +8,22 @@ interface User{
     getCoupon(couponName:string,value:number):number //function with parameters
 }
 
-const ayush:User = {
+
+interface User { //totally allowed
+    githubToken?:string
+} // aka reopening the interface
+
+
+interface Admin extends User{ //extending the interface
+    role: "admin" | "ta" | "learner",
+}
+
+
+const ayush:Admin = {
     dbId:987654321,
     email: "ayush@gmail.com",
     userId: 1,
+    role: "admin",
     startTrial: ()=>{
         return "Trial Started"
     },
