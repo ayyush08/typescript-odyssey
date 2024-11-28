@@ -20,3 +20,15 @@ class User2{
         this.city = 'delhi'; 
     }
 }
+class User3{
+    readonly city: string="Azamgarh";
+    constructor(
+        public email: string,
+        public name: string,
+        private userId:string
+    ) {
+        
+    }
+}
+
+const ramesh = new User3('jad#@fma,com','ramesh','1234');
