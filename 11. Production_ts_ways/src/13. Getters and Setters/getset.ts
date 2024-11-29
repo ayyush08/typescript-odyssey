@@ -1,5 +1,6 @@
 class Useer{
-    private _courseCount =1
+    // private _courseCount =1
+    protected _courseCount =1 // protected can be accessed by the child class which inherits it
     readonly city: string="Azamgarh";
     constructor(
         public email: string,
@@ -32,3 +33,10 @@ class Useer{
 const adnan = new Useer('jad#@fma,com','ramesh');
 
 // adnan.deleteToken();// not allowed as it is private, only accessible inside the class
+
+class SubUser extends Useer{
+    isFamily:boolean=true;
+    chnageCourse(){
+        this._courseCount=4;
+    }
+}
