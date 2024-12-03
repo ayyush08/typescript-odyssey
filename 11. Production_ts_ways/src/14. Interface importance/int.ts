@@ -13,6 +13,7 @@ interface Story{
 
 //Use Case - implementing protocols for a app feature
  //interface never involves definition, it always inclines the must have things in the class.
+//implements - only used for interface
 class Instagram implements TakePhoto{
     constructor(
         public cameraMode: string,
