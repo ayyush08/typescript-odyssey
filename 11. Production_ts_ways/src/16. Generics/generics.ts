@@ -54,4 +54,31 @@ function getSearchProducst<T>(products: T[]): T{
 const getMoreSearchProducts = <T,>(prducts: T[]): T =>{ // the comma after T is optional, it represents that we are passing a generic type and not a JSX tag like in react
     //may do some database ops here
     return prducts[3]
+}  
+// -------------------------------------------------------------------------
+
+
+
+interface Database{
+    connection:string,
+    username:string,
+    password:string
 }
+
+
+
+
+
+function anotherFunction<T,U extends Database>(val1: T,val2: U): object // here we are saying that U should be anything but also should extend Database
+{
+    return {
+        val1,
+        val2
+    }
+}
+
+anotherFunction(3,{
+    connection: 'localhost',
+    username: 'root',
+    password: 'root'
+}) 
