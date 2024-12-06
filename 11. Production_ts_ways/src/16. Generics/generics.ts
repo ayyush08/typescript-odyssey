@@ -40,3 +40,18 @@ identityFour<Bottle>({ // here we are passing our own type - syntax
     brand: 'CocaCola',
     capacity: 500
 })
+
+
+// more ON Generics
+
+// here value we taking is of array type T, and so we need to return the same type
+function getSearchProducst<T>(products: T[]): T{
+    return products[3]
+}
+
+//same functin as an arrow function
+
+const getMoreSearchProducts = <T,>(prducts: T[]): T =>{ // the comma after T is optional, it represents that we are passing a generic type and not a JSX tag like in react
+    //may do some database ops here
+    return prducts[3]
+}
