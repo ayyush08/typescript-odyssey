@@ -82,3 +82,26 @@ anotherFunction(3,{
     username: 'root',
     password: 'root'
 }) 
+
+// -------------------------------------------------------------------------
+
+// Generic Classes
+
+interface Quiz{
+    name: string,
+    type: string,
+}
+
+interface Course{
+    name: string,
+    author: string,
+    subject: string
+}
+// A generic class that can be used with any type ,may not handle all edge cases but can handle some common ones
+class Sellable<T>{
+    public cart: T[]= [];
+
+    addToCart(products: T){
+        this.cart.push(products)
+    }
+}
