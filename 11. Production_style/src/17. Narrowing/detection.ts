@@ -59,7 +59,7 @@ interface Admin{
     isAdmin: boolean
 }
 
-function isAdminAccount(account: User|Admin){
+function isAdminAccount (account: User|Admin){
     // account.isAdmin // Property 'isAdmin' does not exist on type 'User | Admin'.
     if('isAdmin' in account){
         console.log(account.isAdmin);
