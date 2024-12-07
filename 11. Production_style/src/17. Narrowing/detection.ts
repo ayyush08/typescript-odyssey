@@ -29,6 +29,8 @@ function provideId(id: string | null) {
 //     }
 // }
 
+
+// Narrowing it here
 function printAll(strs: string | string[] | null) {
     if (strs && typeof strs === "object") {
         for (const s of strs) {
@@ -40,3 +42,27 @@ function printAll(strs: string | string[] | null) {
 }
 
 //   You’ll notice that we’ve gotten rid of the error above by checking if strs is truthy. This at least prevents us from dreaded errors 
+
+
+//-----------------
+
+// in operator
+//JavaScript has an operator for determining if an object or its prototype chain has a property with a name: the in operator. TypeScript takes this into account as a way to narrow down potential types, or interfaces in our case.
+interface User{
+    name: string,
+    email: string,
+}
+
+interface Admin{
+    name: string,
+    email: string,
+    isAdmin: boolean
+}
+
+function isAdminAccount(account: User|Admin){
+    // account.isAdmin // Property 'isAdmin' does not exist on type 'User | Admin'.
+    if('isAdmin' in account){
+        console.log(account.isAdmin);
+    }
+    return false;
+}
